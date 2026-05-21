@@ -26,6 +26,9 @@ export function Footer() {
               {link.label}
             </Link>
           ))}
+          <span className="basis-full text-slate-500 sm:basis-auto">
+            © 2026 Norvex Aviation Group LLC. All rights reserved.
+          </span>
         </div>
       </div>
     </footer>

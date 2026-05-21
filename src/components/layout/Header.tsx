@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const navItems = [
-  { label: "Services", href: "#services" },
-  { label: "Coverage", href: "#coverage" },
-  { label: "Fleet", href: "#fleet" },
-  { label: "Partnership", href: "#partnership" },
+  { label: "Services", href: "/#services" },
+  { label: "Coverage", href: "/#coverage" },
+  { label: "Fleet", href: "/#fleet" },
+  { label: "Partnership", href: "/#partnership" },
 ];
 
 export function Header() {
@@ -27,7 +27,7 @@ export function Header() {
           ))}
         </nav>
         <Link
-          href="#contact"
+          href="/#contact"
           className="hidden border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:border-emerald-300/60 hover:text-emerald-100 sm:inline-flex"
         >
           Contact
