@@ -1,4 +1,4 @@
-import { states } from "@/lib/site";
+import { coverageStates } from "@/lib/site";
 
 export function CoverageSection() {
   return (
@@ -13,11 +13,11 @@ export function CoverageSection() {
           </h2>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
-          {states.map((state) => (
-            <div key={state} className="border border-slate-200 bg-slate-50 p-8">
-              <p className="text-3xl font-semibold tracking-[-0.03em]">{state}</p>
+          {coverageStates.map((state) => (
+            <div key={state.name} className="border border-slate-200 bg-slate-50 p-8">
+              <p className="text-3xl font-semibold tracking-[-0.03em]">{state.name}</p>
               <p className="mt-4 text-base leading-7 text-slate-600">
-                Targeted coverage planning for seasonal demand, crew positioning, and aircraft utilization.
+                {state.body}
               </p>
             </div>
           ))}

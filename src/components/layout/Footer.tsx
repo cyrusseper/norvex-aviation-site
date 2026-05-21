@@ -1,4 +1,11 @@
 import { siteConfig } from "@/lib/site";
+import Link from "next/link";
+
+const legalLinks = [
+  { href: "/privacy", label: "Privacy" },
+  { href: "/terms", label: "Terms" },
+  { href: "/disclaimer", label: "Disclaimer" },
+];
 
 export function Footer() {
   return (
@@ -8,14 +15,18 @@ export function Footer() {
           <p className="text-lg font-semibold uppercase tracking-[0.3em] text-white">
             NORVEX AVIATION
           </p>
-          <p className="mt-3 text-base text-slate-300">&ldquo;{siteConfig.tagline}&rdquo;</p>
+          <p className="mt-3 text-base text-slate-300">{siteConfig.tagline}</p>
+          <a className="mt-3 block text-sm font-semibold text-emerald-200" href={siteConfig.contactHref}>
+            {siteConfig.contactEmail}
+          </a>
         </div>
-        <a
-          href={siteConfig.contactHref}
-          className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-200 transition hover:text-white"
-        >
-          Contact Us
-        </a>
+        <div className="flex flex-wrap gap-5 text-sm font-semibold text-slate-300">
+          {legalLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="transition hover:text-white">
+              {link.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </footer>
   );

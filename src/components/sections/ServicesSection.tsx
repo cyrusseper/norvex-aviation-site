@@ -12,7 +12,7 @@ export function ServicesSection() {
             Built for demanding aerial missions.
           </h2>
         </div>
-        <div className="mt-14 grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-14 grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
             <article key={service.title} className="min-h-72 bg-[#0a1b2a] p-7">
               <h3 className="text-xl font-semibold text-white">{service.title}</h3>

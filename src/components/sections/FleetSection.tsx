@@ -14,12 +14,19 @@ export function FleetSection() {
         </div>
         <div className="space-y-4">
           {fleetHighlights.map((item, index) => (
-            <div key={item} className="flex items-center gap-5 border border-white/10 bg-[#06131f] p-6">
+            <details
+              key={item.title}
+              className="group border border-white/10 bg-[#06131f] p-6 transition hover:border-emerald-300/40"
+            >
+              <summary className="flex cursor-pointer list-none items-center gap-5">
               <span className="flex size-12 shrink-0 items-center justify-center border border-emerald-300/40 text-sm font-semibold text-emerald-200">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <p className="text-xl font-semibold text-white">{item}</p>
-            </div>
+                <span className="flex-1 text-xl font-semibold text-white">{item.title}</span>
+                <span className="text-2xl leading-none text-emerald-200 transition group-open:rotate-45">+</span>
+              </summary>
+              <p className="mt-4 pl-[68px] text-base leading-8 text-slate-300">{item.body}</p>
+            </details>
           ))}
         </div>
       </div>
