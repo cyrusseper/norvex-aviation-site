@@ -2,9 +2,11 @@ import { siteConfig } from "@/lib/site";
 import Link from "next/link";
 
 const legalLinks = [
-  { href: "/privacy", label: "Privacy" },
-  { href: "/terms", label: "Terms" },
-  { href: "/disclaimer", label: "Disclaimer" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Use" },
+  { href: "/disclaimer", label: "Operational Disclaimer" },
+  { href: "/cookies", label: "Cookie Notice" },
+  { href: "/accessibility", label: "Accessibility" },
 ];
 
 export function Footer() {
@@ -20,13 +22,13 @@ export function Footer() {
             {siteConfig.contactEmail}
           </a>
         </div>
-        <div className="flex flex-wrap gap-5 text-sm font-semibold text-slate-300">
+        <div className="flex max-w-3xl flex-wrap gap-x-5 gap-y-3 text-sm font-semibold text-slate-300 md:justify-end">
           {legalLinks.map((link) => (
             <Link key={link.href} href={link.href} className="transition hover:text-white">
               {link.label}
             </Link>
           ))}
-          <span className="basis-full text-slate-500 sm:basis-auto">
+          <span className="basis-full text-slate-500 md:text-right">
             © 2026 Norvex Aviation Group LLC. All rights reserved.
           </span>
         </div>

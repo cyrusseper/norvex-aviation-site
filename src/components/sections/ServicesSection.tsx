@@ -14,7 +14,10 @@ export function ServicesSection() {
         </div>
         <div className="mt-14 grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
-            <article key={service.title} className="min-h-72 bg-[#0a1b2a] p-7">
+            <article
+              key={service.title}
+              className="min-h-72 bg-[#0a1b2a] p-7 transition duration-300 hover:-translate-y-1 hover:bg-[#0d2235] hover:shadow-2xl hover:shadow-emerald-950/30"
+            >
               <h3 className="text-xl font-semibold text-white">{service.title}</h3>
               <p className="mt-5 text-base leading-8 text-slate-300">{service.body}</p>
             </article>
